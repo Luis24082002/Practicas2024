@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú de Navegación Off-Canvas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+        background-color: beige;
+      }
+
+      /* Ocultar el checkbox */
+      #menuToggle {
+        display: none;
+      }
+
+      /* Estilos del botón del menú */
+      label {
+        font-size: 18px;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      /* Estilos del menú */
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 150px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        overflow: hidden;
+        padding: 20px;
+        transition: 0.3s ease;
+      }
+
+      /* Enlaces del menú */
+      .menu a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+        margin: 10px 0;
+      }
+
+      /* Cuando el checkbox está marcado, muestra el menú */
+      #menuToggle:checked ~ .menu {
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Checkbox para el menú -->
+    <input type="checkbox" id="menuToggle" />
+
+    <!-- Botón del menú -->
+    <label for="menuToggle">☰ Menú</label>
+
+    <!-- Menú off-canvas -->
+    <div class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+    </div>
+  </body>
+</html>
